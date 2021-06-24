@@ -1,0 +1,40 @@
+{
+  "name": "boiler-plate",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "clear": "rm -rf dist .cache",
+    "watch": "yarn clear && parcel watch src/{main.html,background.js} -d dist/src --public-url ./ -t node --bundle-node-modules",
+    "build": "yarn clear && parcel build src/{main.html,background.js} -d dist/src --public-url ./"
+  },
+  "staticFiles": {
+    "staticPath": [
+      {
+        "staticPath": "static",
+        "staticOutDir": "../static/"
+      },
+      {
+        "staticPath": "manifest.json",
+        "staticOutDir": "../"
+      }
+    ]
+  },
+  "devDependencies": {
+    "@babel/core": "^7.14.6",
+    "@fullhuman/postcss-purgecss": "^3.0",
+    "autoprefixer": "^9",
+    "parcel-bundler": "^1.12.5",
+    "parcel-plugin-static-files-copy": "^2.6.0",
+    "postcss": "^7",
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat"
+  },
+  "alias": {
+    "react": "preact/compat",
+    "react-dom/test-utils": "preact/test-utils",
+    "react-dom": "preact/compat"
+  },
+  "dependencies": {
+    "preact": "^10.5.13"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "name": "Boilerplate Extension",
+  "version": "1.0",
+  "description": "Boiler Plate Extension",
+  "manifest_version": 2,
+  "author": "Your Name",
+  "chrome_url_overrides": {
+    "newtab": "./src/main.html"
+  },
+  "permissions": [
+    "tabs",
+    "contextMenus",
+    "bookmarks",
+    "history",
+    "chrome://favicon/"
+  ],
+  "background": {
+    "scripts": ["./src/background.js"]
+  }
+}
